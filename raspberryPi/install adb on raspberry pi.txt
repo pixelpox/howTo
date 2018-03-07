@@ -1,0 +1,3 @@
+sudo apt-get install adb
+
+sudo apt-get install android-sdk-platform-tools
