@@ -1,0 +1,2 @@
+.\adb.exe shell screencap -p /sdcard/screen.png; .\adb.exe pull /sdcard/screen.png;
+ .\screen.png

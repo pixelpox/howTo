@@ -1,0 +1,13 @@
+##Configure NTP client
+
+sudo apt-get install ntp ntpdate -y
+sudo service ntp stop
+sudo ntpdate -s time.nist.gov
+sudo service ntp start
+timedatectl status
+timedatectl list-timezones
+
+sudo timedatectl set-timezone Europe/London
+
+#source
+https://docs.storj.io/docs/storj-share-daemon-cli

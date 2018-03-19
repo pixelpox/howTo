@@ -1,0 +1,11 @@
+#Enable the port
+adb tcpip 5555
+
+#Connect to the device
+<ip of mobile device>:5555
+
+#Get IP Address
+adb shell ip -f inet addr show wlan0
+
+#source
+https://stackoverflow.com/questions/2604727/how-can-i-connect-to-android-with-adb-over-tcp
