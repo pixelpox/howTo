@@ -1,0 +1,14 @@
+#make the ssh keys if you dont have a RSA version
+ssh-keygen -t rsa -C "your_email@example.com"
+
+#Copy the public key to github
+cat ~/.ssh/id_rsa.pub
+
+#Test connection with ssh
+ssh -T git@github.com
+
+#Change the origin server to the SSH host
+git remote set-url origin git@github.com:pixelpox/your-repository.git
+
+##source
+https://gist.github.com/developius/c81f021eb5c5916013dc
