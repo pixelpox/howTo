@@ -1,0 +1,23 @@
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+
+sudo dpkg -i chrome-remote-desktop_current_amd64.deb
+
+if it fails 
+
+sudo apt-get install -f
+
+goto chrome browser
+place the following in the address bar
+
+chrome://apps
+
+enable remote connections
+
+if failed to start try
+
+sudo groupadd chrome-remote-desktop
+usermod -a -G chrome-remote-desktop <username>
+
+#Source
+https://support.google.com/chrome/answer/1649523?co=GENIE.Platform%3DDesktop&hl=en
+https://askubuntu.com/questions/605381/chrome-remote-desktop-failed-to-start-remote-access-service
