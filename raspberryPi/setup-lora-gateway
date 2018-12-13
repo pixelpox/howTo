@@ -1,0 +1,25 @@
+# Setup a lora gateway on raspbery pi
+
+enable spi
+sudo raspi-config
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+```
+git clone https://github.com/ttn-zh/ic880a-gateway.git ~/ic880a-gateway
+```
+```
+cd ~/ic880a-gateway
+sudo ./install.sh spi
+```
+
+get legacy packet forwarder fateway EUI
+
+```
+cat /opt/ttn-gateway/bin/local_conf.json | grep gateway_ID
+```
+
+
+# Source
+http://sandboxelectronics.com/?p=2696

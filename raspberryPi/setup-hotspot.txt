@@ -1,0 +1,75 @@
+sudo apt-get install hostapd bridge-utils
+sudo systemctl stop hostapd
+
+sudo vi /etc/dhcpcd.conf
+
+add to the bottom
+	`denyinterfaces wlan0`
+
+
+#Setting up a single ap
+
+sudo apt-get install dnsmasq hostapd
+sudo systemctl stop dnsmasq
+sudo systemctl stop hostapd
+
+sudo vi /etc/dhcpcd.conf
+
+```
+interface wlan0
+        static ip_address=192.168.200.1/24
+```
+
+sudo service dhcpcd restart
+
+sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig 
+sudo vi /etc/dnsmasq.conf
+
+```
+interface=wlan0
+  dhcp-range=192.168.200.2,192.168.200.10,255.255.255.0,24h
+```
+
+sudo vi /etc/hostapd/hostapd.conf
+
+```
+interface=wlan0
+driver=nl80211
+ssid=phoneLab
+hw_mode=g
+channel=7
+wmm_enabled=0
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=xxx
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+```
+
+sudo vi /etc/default/hostapd
+
+```
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+```
+
+
+## How to view clients connected
+	[follow guide here](https://www.raspberrypi.org/forums/viewtopic.php?t=109060)
+
+## Give clients a static ip
+
+use the `dhcp-host=11:22:33:44:55:66,192.168.0.60` command
+
+
+# source:
+http://oss.segetech.com/intra/srv/dnsmasq.conf
+https://raspberrypi.stackexchange.com/questions/68261/simultaneous-wlan0-wlan1-access-points-via-hostapd
+https://www.raspberrypi.org/forums/viewtopic.php?t=109060
+https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
+https://www.raspberrypi.org/forums/viewtopic.php?t=14588
+https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
+https://help.ubuntu.com/community/WifiDocs/Device/Linksys%20WUSB600N
+https://wiki.debian.org/rt2800usb

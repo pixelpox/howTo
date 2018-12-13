@@ -1,0 +1,18 @@
+#Install nodeJS v8.x
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+
+#get storjMonitor
+sudo apt-get install nodejs
+sudo apt-get install -y build-essential
+
+git clone https://github.com/calxibe/StorjMonitor.git
+cd StorjMonitor
+chmod u+x storjMonitor-install.sh
+
+get api key from website and place it in the storjmonitor.js file (line 10)
+chmod u+x storjMonitor.sh
+./storjMonitor.sh
+#source
+https://joshtronic.com/2017/12/11/upgrade-to-nodejs-8-on-debian-and-ubuntu/
+https://github.com/calxibe/StorjMonitor
