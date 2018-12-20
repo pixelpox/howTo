@@ -5,14 +5,40 @@
 3. find the ip address of the pi
 4. ssh to raspberry pi by using user pi password raspberry
 
+# Update Pi
+
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+```
+
+# Install software
+```
+sudo apt-get install git
+```
+
+# Change Hostname
+```
+sudo vi /etc/hostname
+sudo vi /etc/hosts
+```
+
 # Add personal user
+add your user here
+```
 sudo adduser simon
 sudo visudo
+```
 
-add your user here
+# Change to new user
+```
+su simon
+```
 
-# Remove the pi user
-sudo deluser -remove-home pi
+# Test sudo
+```
+sudo echo hello
+```
 
 # Change the network interface
 Set the eth0 interface to static
@@ -25,26 +51,22 @@ interface eth0
   static routers=192.168.0.251
   static domain_name_servers=192.168.0.234 8.8.8.8
 ```
-# Get ssh keys
+
+# Generate SSH keys
+```
+ssh-keygen
+```
+
+# Get SSH keys
 ```
 cd ~/.ssh
 wget -O authorized_keys www.pixelpox.co.uk/sshkeys
 ```
-# Change Hostname
 
-sudo vi /etc/hostname
-sudo vi /etc/hosts
+# Remove the pi user
+sudo deluser -remove-home pi
 
-# Update Raspberry Pi
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
 
-# Install software
-```
-sudo apt-get install git
-```
 
 # source
 * https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
