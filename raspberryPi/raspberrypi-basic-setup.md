@@ -15,7 +15,6 @@ sudo update-alternatives --config editor
 sudo adduser simon
 sudo visudo
 ```
-add your user here
 
 # switch accounts
 ```
@@ -56,6 +55,16 @@ sudo vi /etc/hostname
 sudo vi /etc/hosts
 ```
 
+# Update Raspberry Pi
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+#Install software
+```
+sudo apt-get install git
+```
 
 
 # reboot the pi
