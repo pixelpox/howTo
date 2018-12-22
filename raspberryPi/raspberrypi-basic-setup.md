@@ -5,14 +5,28 @@
 3. find the ip address of the pi
 4. ssh to raspberry pi by using user pi password raspberry
 
+# Change to a real editor
+```
+sudo update-alternatives --config editor
+```
+
 # Add personal user
+```
 sudo adduser simon
 sudo visudo
-
+```
 add your user here
 
-# Remove the pi user
-sudo deluser -remove-home pi
+# switch accounts
+```
+su simon
+```
+
+# generate ssh keys
+```
+ssh-keygen
+```
+
 
 # Change the network interface
 Set the eth0 interface to static
@@ -21,7 +35,7 @@ sudo vi /etc/dhcpcd.conf
 ```
 ```
 interface eth0
-  static ip_address=192.168.0.34/24
+  static ip_address=192.168.0.161/24
   static routers=192.168.0.251
   static domain_name_servers=192.168.0.234 8.8.8.8
 ```
@@ -31,9 +45,10 @@ cd ~/.ssh
 wget -O authorized_keys www.pixelpox.co.uk/sshkeys
 ```
 # Change Hostname
-
+```
 sudo vi /etc/hostname
 sudo vi /etc/hosts
+```
 
 # Update Raspberry Pi
 ```
@@ -44,6 +59,39 @@ sudo apt-get upgrade
 # Install software
 ```
 sudo apt-get install git
+```
+
+# reboot the pi
+```
+sudo reboot now
+```
+
+# Remove the pi user
+```
+sudo deluser -remove-home pi
+```
+
+
+# configure git
+
+read this to setup ssh keys
+[https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+
+
+read this to setup ssh pushing
+[https://gist.github.com/developius/c81f021eb5c5916013dc](https://gist.github.com/developius/c81f021eb5c5916013dc)
+
+configure the local Client
+
+```
+git config --global user.email ""
+git config --global user.name ""
+```
+## cheatsheet for github
+
+```
+git push  <REMOTENAME> <BRANCHNAME>
 ```
 
 # source
