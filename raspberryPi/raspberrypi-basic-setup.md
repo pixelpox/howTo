@@ -39,7 +39,13 @@ interface eth0
   static routers=192.168.0.251
   static domain_name_servers=192.168.0.234 8.8.8.8
 ```
-# Get ssh keys
+
+# Generate SSH keys
+```
+ssh-keygen
+```
+
+# Get SSH keys
 ```
 cd ~/.ssh
 wget -O authorized_keys www.pixelpox.co.uk/sshkeys
@@ -50,16 +56,7 @@ sudo vi /etc/hostname
 sudo vi /etc/hosts
 ```
 
-# Update Raspberry Pi
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
 
-# Install software
-```
-sudo apt-get install git
-```
 
 # reboot the pi
 ```
