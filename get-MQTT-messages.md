@@ -16,7 +16,13 @@ These can both be found unser the application page on The Things Network.
 
 ![](images\LORAWAN\accesskey-example.PNG "Application Key Example")
 
+The following information can be used in MQTTBox client to listen for any updates. 
 
+![](images\LORAWAN\mqttbox-client-settings.PNG)
+
+A wide scope example of listening to all devices that upload information to the MQTT server.
+
+![](images\LORAWAN\mqttbox-client-settings.PNG)
 # Source
 
 1. https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04
