@@ -18,3 +18,11 @@ for (var i = 0; i < names.length; i++)
 	gamesList += names[i].innerText + '\n';
 }
 ```
+
+----
+
+## more game details
+
+var gameId = document.body.getElementsByClassName('gameListRow');
+
+game_427250
