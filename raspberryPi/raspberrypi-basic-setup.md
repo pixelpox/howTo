@@ -40,10 +40,9 @@ Set the eth0 interface to static
 sudo vi /etc/dhcpcd.conf
 ```
 
-```
-
+```bash
 interface eth0
-  static ip_address=192.168.0.161/24
+  static ip_address=192.168.0.195/24
   static routers=192.168.0.251
   static domain_name_servers=192.168.0.234 8.8.8.8
 ```
@@ -78,9 +77,8 @@ sudo apt-get upgrade
 ## Install software
 
 ```bash
-sudo apt-get install git
+sudo apt-get -y install git curl screen
 ```
-
 
 ## reboot the pi
 
@@ -94,13 +92,10 @@ sudo reboot now
 sudo deluser -remove-home pi
 ```
 
-
 ## configure git
 
 read this to setup ssh keys
 [https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-
-
 
 read this to setup ssh pushing
 [https://gist.github.com/developius/c81f021eb5c5916013dc](https://gist.github.com/developius/c81f021eb5c5916013dc)
@@ -120,12 +115,12 @@ git push  <REMOTENAME> <BRANCHNAME>
 
 ## source
 
-1. https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
+1. <https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0>
 
-2. https://raspi.tv/2012/how-to-create-a-new-user-on-raspberry-pi
+2. <https://raspi.tv/2012/how-to-create-a-new-user-on-raspberry-pi>
 
-3. https://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update
+3. <https://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update>
 
-4. https://www.jeffgeerling.com/blog/2018/setting-static-ip-address-raspbian-jessie-lite-on-raspberry-pi
+4. <https://www.jeffgeerling.com/blog/2018/setting-static-ip-address-raspbian-jessie-lite-on-raspberry-pi>
 
-5. https://thepihut.com/blogs/raspberry-pi-tutorials/19668676-renaming-your-raspberry-pi-the-hostname
+5. <https://thepihut.com/blogs/raspberry-pi-tutorials/19668676-renaming-your-raspberry-pi-the-hostname>
