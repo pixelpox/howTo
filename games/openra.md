@@ -1,15 +1,15 @@
 # How to install OpenRA in linux
 
-## Quick information
+## Quick Information
 
-Current version: release-20190314
+* Current version: release-20190314
 
-download location: https://www.openra.net/download/
+* download location: https://www.openra.net/download/
 
-## prerequisites
+## Prerequisites
 
-mono 4.2 or later
-64 bit system
+* mono 4.2 or later
+* 64 bit system
 
 ## How to find current version of ubuntu
 
