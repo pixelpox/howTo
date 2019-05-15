@@ -6,7 +6,7 @@ Current version: release-20190314
 
 download location: https://www.openra.net/download/
 
-## pre prerequisites
+## prerequisites
 
 mono 4.2 or later
 64 bit system
