@@ -77,7 +77,7 @@ sudo apt-get upgrade
 ## Install software
 
 ```bash
-sudo apt-get -y install git curl screen
+sudo apt-get -y install git curl screen openssh-server
 ```
 
 ## reboot the pi
@@ -90,6 +90,12 @@ sudo reboot now
 
 ```bash
 sudo deluser -remove-home pi
+```
+
+## enable ssh server
+
+```bash 
+
 ```
 
 ## configure git
