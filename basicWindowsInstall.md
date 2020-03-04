@@ -2,6 +2,8 @@
 https://chocolatey.org/docs/installation
 
 ## Install useful software
-### Install fritzing
+### [Install fritzing][1]
+choco install fritzing -y
 
-https://chocolatey.org/packages/fritzing#files
+# Sources
+[1]: https://chocolatey.org/packages/fritzing#files
